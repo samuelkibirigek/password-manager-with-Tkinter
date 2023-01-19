@@ -60,28 +60,28 @@ canvas.grid(column=1, row=0)
 website_label = Label(text="Label:")
 website_label.grid(column=0, row=1)
 
-website_input = Entry(width=45)
-website_input.grid(column=1, row=1, columnspan=2)
+website_input = Entry()
+website_input.grid(column=1, row=1, columnspan=2, sticky=EW)
 website_input.focus()
 
 username_label = Label(text="Email/Username:")
 username_label.grid(column=0, row=2)
 
-username_input = Entry(width=45)
-username_input.grid(column=1, row=2, columnspan=2)
+username_input = Entry()
+username_input.grid(column=1, row=2, columnspan=2, sticky=EW)
 username_input.insert(0, "samuelkalule@email.com")
 
 password_label = Label(text="password")
 password_label.grid(column=0, row=3)
 
 password_input = Entry()
-password_input.grid(column=1, row=3)
+password_input.grid(column=1, row=3, sticky=EW)
 
 generate_button = Button(text="Generate Password", command=generate_password)
 generate_button.grid(column=2, row=3)
 
-add_button = Button(text="Add", width=40, command=save_data)
-add_button.grid(column=1, row=4, columnspan=2)
+add_button = Button(text="Add", width=35, command=save_data)
+add_button.grid(column=1, row=4, columnspan=2, sticky=EW)
 
 
 window.mainloop()
